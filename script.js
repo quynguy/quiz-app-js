@@ -168,10 +168,16 @@ function selectAnswer(e) {
     nextButton.style.display = "block";
 }
 
-
+function showScore() {
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    // console.log('scored ' + score + ' out of ' + questions.length); //
+    nextButton.innerHTML = "Let's Play Again!";
+    nextButton.style.display = "block";
+}
 
 function handleNextButton() {
-    currentQuestionsIndex++;
+    currentQuestionIndex++;
     if(currentQuestionIndex < questions.length) {
         showQuestion();
     } else { 
