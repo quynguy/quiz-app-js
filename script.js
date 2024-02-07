@@ -110,6 +110,7 @@ const questions = [
 const questionElement = document.getElementById("questions");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
+const listItem = document.getElementById("list-item");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -170,11 +171,23 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
+    // const playerName = prompt("Enter Your Name:");
+    // if (!playerName) {
+    //     alert("Name can not be empty. Please try again.");
+    //     return;
+    // }
+    // const playerScore = score;
+    // addScore(playerName, playerScore);
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    // console.log('scored ' + score + ' out of ' + questions.length); //
     nextButton.innerHTML = "Let's Play Again!";
     nextButton.style.display = "block";
 }
+
+// function addScore(playerName, playerScore) {
+//     listItem.textContent = `${playerName}: ${playerScore}`;
+//     scoresList.appendChild(listItem);
+// }
+
 
 function handleNextButton() {
     currentQuestionIndex++;
@@ -191,10 +204,22 @@ nextButton.addEventListener("click", () => {
     }else {
         startQuiz();
     }
-})
+});
+
+
 
 startQuiz(); 
 
 
+
+// display high scores //
+
+const scoresList = document.getElementById("scores-list");
+
+function addScore(score) {
+    const listItem = document.createElement('li');
+    listItem.textContent = `Score: ${score}`;
+    scoresList.appendChild(listItem);
+};
 
 

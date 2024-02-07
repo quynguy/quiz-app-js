@@ -6,24 +6,29 @@
 }
 
 body {
-    background-color: rgb(245, 152, 168);
+    background-image: url(https://i.ibb.co/1Rqj2GM/Screenshot-2024-02-07-104553.png);
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 .app-container{
+
     background-color: rgb(223, 196, 196);
     width: 90%;
     max-width: 600px;
-    margin: 100px auto 0;
+    margin: 200px auto 0;
     border-radius: 10px;
     padding: 30px;
 }
 
 .app-container h1 {
-    font-size: 25px;
-    color: rgb(43, 12, 17);
+    font-size: 30px;
+    color: rgb(117, 32, 46);
     font-weight: 600;
     border-bottom: 1px solid rgb(128, 15, 0);
     padding-bottom: 30px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .quiz {
@@ -31,9 +36,10 @@ body {
 }
 
 .quiz h2 {
-    font-size: 18px;
+    font-size: 20px;
     color: rgb(138, 24, 43);
     font-weight: 600;
+    margin-bottom: 8px;
 }
 
 .btn {
@@ -48,6 +54,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s;
+    font-size: 17px;
 }
 
 .btn:hover:not([disabled]) {
@@ -63,15 +70,62 @@ body {
     background:rgb(181, 40, 64);
     color: white;
     font-weight: 500;
-    width: 150px;
+    width: 175px;
     border: 0;
     padding: 10px;
     margin: 20px auto 0;
     border-radius: 4px;
     cursor: pointer;
     display: block;
+    font-size: 17px;
 }
 
+
+/* score board title */
+
+/* score board  */
+.score-board {
+    background-color: rgb(223, 196, 196);
+    width: 90%;
+    max-width: 800px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 55px;
+    text-align: center;
+}
+
+.score-board h2 {
+    font-size: 25px;
+    color: rgb(138, 24, 43);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.all-time-high-scores {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: auto;
+    gap: 0px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "player-names scores";
+}
+  
+  
+.player-names { 
+    grid-area: player-names; 
+}
+  
+.scores {
+    grid-area: scores; 
+}
+  
+
+ol, ul {
+    list-style: none;
+}
 
 /* script js */
 
