@@ -20,7 +20,7 @@ body {
 
 .app-container h1 {
     font-size: 25px;
-    color: rgb(103, 17, 31);
+    color: rgb(43, 12, 17);
     font-weight: 600;
     border-bottom: 1px solid rgb(128, 15, 0);
     padding-bottom: 30px;
@@ -38,7 +38,7 @@ body {
 
 .btn {
     background-color:rgb(252, 250, 250);
-    color:rgb(239, 96, 96);
+    color:rgb(15, 12, 12);
     font-weight: 500;
     width: 100%;
     border: 2px solid rgb(133, 9, 9);
@@ -50,9 +50,13 @@ body {
     transition: all 0.3s;
 }
 
-.btn:hover {
-    background:rgb(238, 229, 230);
-    color: white;
+.btn:hover:not([disabled]) {
+    background:rgb(231, 183, 189);
+    color: rgb(240, 237, 237);
+}
+
+.btn:disabled {
+    cursor:no-drop;
 }
 
 #next-btn{
