@@ -1,9 +1,11 @@
+console.log("app js working");
+
 // 10 questions and 4 options //
 
 const questions = [
     {
         question: "When did the tradition of exchanging Valentines Day cards begin?",
-        answer: [
+        answers: [
             { text: "15th century", correct: false },
             { text: "18th century", correct: false },
             { text: "12th century", correct: false },
@@ -13,7 +15,7 @@ const questions = [
 
     {
         question: "Which Roman emperor is associated with the origin of Valentine's Day?",
-        answer: [
+        answers: [
             { text: "Augustus", correct: false },
             { text: "Claudius II", correct: true },
             { text: "Nero", correct: false },
@@ -23,7 +25,7 @@ const questions = [
 
     {
         question: "In which country did the first Valentine's Day greeting cards originate?",
-        answer: [
+        answers: [
             { text: "England", correct: true },
             { text: "France", correct: false },
             { text: "Italy", correct: false },
@@ -33,7 +35,7 @@ const questions = [
 
     {
         question: "What was St. Valentine's profession according to legend?",
-        answer: [
+        answers: [
             { text: "Soldier", correct: false },
             { text: "Priest", correct: true },
             { text: "Merchant", correct: false },
@@ -43,7 +45,7 @@ const questions = [
 
     {
         question: "Which ancient Roman festival is believed to have influenced Valentine's Day celebrations?",
-        answer: [
+        answers: [
             { text: "Saturnalia", correct: false },
             { text: "Lupercalia", correct: false },
             { text: "Feast of Lupercus", correct: true },
@@ -53,7 +55,7 @@ const questions = [
 
     {
         question: "Who is believed to have written the first Valentine's Day poem?",
-        answer: [
+        answers: [
             { text: "William Shakespeare", correct: false },
             { text: "Lord Byron", correct: false },
             { text: "John Keats", correct: false },
@@ -63,7 +65,7 @@ const questions = [
 
     { 
         question: "Which flower became associated with Valentine's Day due to its connection with Venus, the Roman goddess of love?",
-        answer: [
+        answers: [
             { text: "Tulip", correct: false },
             { text: "Rose", correct: true },
             { text: "Daisy", correct: false },
@@ -73,7 +75,7 @@ const questions = [
 
     {
         question: "What is the origin of the heart shape as a symbol of love on Valentine's Day?",
-        answer: [
+        answers: [
             { text: "Ancient Greek mythology", correct: false },
             { text: "Victorian literature", correct: false },
             { text: "Medieval iconography", correct: true },
@@ -83,7 +85,7 @@ const questions = [
 
     {
         question: "What is the significance of the color red on Valentine's Day?",
-        answer: [
+        answers: [
             { text: "Purity", correct: false },
             { text: "Friendship", correct: false },
             { text: "Prosperity", correct: false },
@@ -93,7 +95,7 @@ const questions = [
 
     {
         question: "Which Pope officially declared February 14th as Valentine's Day?",
-        answer: [
+        answers: [
             { text: "Pope Benedict XVI", correct: false },
             { text: "Pope Gelasius I", correct: true },
             { text: "Pope John Paul II", correct: false },
@@ -103,5 +105,38 @@ const questions = [
 ];
 
 
+// retrieve elements from HTML documents by their respective ID's // 
+
+const questionElement = document.getElementById("questions");
+const answerButton = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+// start quiz //
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+};
+
+// display questions //
+function showQuestion() {
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + "." + currentQuestion.question;
+
+    // display options (answers) //
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButton.appendChild(button);
+    });
+};
+
+startQuiz(); 
 
 
