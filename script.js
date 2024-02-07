@@ -155,6 +155,7 @@ function selectAnswer(e) {
     const isCorrect = selectedBtn.dataset.correct === "true";
     if (isCorrect){
         selectedBtn.classList.add("correct");
+        score++;
     } else {
         selectedBtn.classList.add("incorrect");
     }
@@ -166,6 +167,25 @@ function selectAnswer(e) {
     });
     nextButton.style.display = "block";
 }
+
+
+
+function handleNextButton() {
+    currentQuestionsIndex++;
+    if(currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else { 
+        showScore(); // display score when all questions are answered //
+    }
+}
+
+nextButton.addEventListener("click", () => {
+    if(currentQuestionIndex < questions.length) {
+        handleNextButton();
+    }else {
+        startQuiz();
+    }
+})
 
 startQuiz(); 
 
