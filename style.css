@@ -51,7 +51,7 @@ body {
 }
 
 .btn:hover {
-    background:rgb(216, 69, 94);
+    background:rgb(238, 229, 230);
     color: white;
 }
 
@@ -66,4 +66,15 @@ body {
     border-radius: 4px;
     cursor: pointer;
     display: block;
+}
+
+
+/* script js */
+
+.correct {
+    background: green;
+}
+
+.incorrect {
+    background: red;
 }
