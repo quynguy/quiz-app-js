@@ -37,7 +37,7 @@ body {
 }
 
 .btn {
-    background-color:rgb(210, 184, 189);
+    background-color:rgb(252, 250, 250);
     color:rgb(239, 96, 96);
     font-weight: 500;
     width: 100%;
@@ -51,7 +51,7 @@ body {
 }
 
 .btn:hover {
-    background:rgb(186, 46, 70);
+    background:rgb(216, 69, 94);
     color: white;
 }
 

@@ -1,0 +1,107 @@
+// 10 questions and 4 options //
+
+const questions = [
+    {
+        question: "When did the tradition of exchanging Valentines Day cards begin?",
+        answer: [
+            { text: "15th century", correct: false },
+            { text: "18th century", correct: false },
+            { text: "12th century", correct: false },
+            { text: "19th century", correct: true },
+        ]
+    },
+
+    {
+        question: "Which Roman emperor is associated with the origin of Valentine's Day?",
+        answer: [
+            { text: "Augustus", correct: false },
+            { text: "Claudius II", correct: true },
+            { text: "Nero", correct: false },
+            { text: "Julius Caesar", correct: false },
+        ]
+    },
+
+    {
+        question: "In which country did the first Valentine's Day greeting cards originate?",
+        answer: [
+            { text: "England", correct: true },
+            { text: "France", correct: false },
+            { text: "Italy", correct: false },
+            { text: "Germany", correct: false },
+        ]
+    },
+
+    {
+        question: "What was St. Valentine's profession according to legend?",
+        answer: [
+            { text: "Soldier", correct: false },
+            { text: "Priest", correct: true },
+            { text: "Merchant", correct: false },
+            { text: "Physician", correct: false },
+        ]
+    },
+
+    {
+        question: "Which ancient Roman festival is believed to have influenced Valentine's Day celebrations?",
+        answer: [
+            { text: "Saturnalia", correct: false },
+            { text: "Lupercalia", correct: false },
+            { text: "Feast of Lupercus", correct: true },
+            { text: "Bacchanalia", correct: false },
+        ]
+    },
+
+    {
+        question: "Who is believed to have written the first Valentine's Day poem?",
+        answer: [
+            { text: "William Shakespeare", correct: false },
+            { text: "Lord Byron", correct: false },
+            { text: "John Keats", correct: false },
+            { text: "Charles, Duke of Orleans", correct: true },
+        ]
+    },
+
+    { 
+        question: "Which flower became associated with Valentine's Day due to its connection with Venus, the Roman goddess of love?",
+        answer: [
+            { text: "Tulip", correct: false },
+            { text: "Rose", correct: true },
+            { text: "Daisy", correct: false },
+            { text: "Lily", correct: false },
+        ]
+    },
+
+    {
+        question: "What is the origin of the heart shape as a symbol of love on Valentine's Day?",
+        answer: [
+            { text: "Ancient Greek mythology", correct: false },
+            { text: "Victorian literature", correct: false },
+            { text: "Medieval iconography", correct: true },
+            { text: "Renaissance art", correct: false },
+        ]
+    },
+
+    {
+        question: "What is the significance of the color red on Valentine's Day?",
+        answer: [
+            { text: "Purity", correct: false },
+            { text: "Friendship", correct: false },
+            { text: "Prosperity", correct: false },
+            { text: "Passion and love", correct: true },
+        ]
+    },
+
+    {
+        question: "Which Pope officially declared February 14th as Valentine's Day?",
+        answer: [
+            { text: "Pope Benedict XVI", correct: false },
+            { text: "Pope Gelasius I", correct: true },
+            { text: "Pope John Paul II", correct: false },
+            { text: "Pope Francis", correct: false },
+        ]
+    }
+];
+
+
+
+
